@@ -1,0 +1,35 @@
+# Compile files
+
+main.aux
+main.bbl
+main.fdb_latexmk
+main.fls
+main.log
+main.out
+main.synctex.gz
+main.blg
+*.aux
+
+# Mac default files
+
+*.DS_Store
+paper/.DS_Store
+
+# Output files
+data/embeddings_data.csv
+balanced_data_glove.csv
+balanced_data.csv
+glove.twitter.27B*
+embeddings_data_glove.npy
+10firstscolumns.csv
+cnn_trained_model.h5
+best_model.pth
+data/embeddings_data.csv
+embeddings_data_sequencial.npy
+
+# Backend files
+backend/balanced_data.csv
+backend/best_model.pth
+backend/venv/
+
+

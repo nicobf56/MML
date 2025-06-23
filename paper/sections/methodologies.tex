@@ -1,0 +1,21 @@
+\subsection{Preprocessing and Data Augmentation}
+
+To implement the methods based on Machine learning or deep learning for hate speech detection on Twitter, a thorough data preprocessing procedure was carried out to balance the classes in the dataset. First, the two target categories were identified: \textit{hate speech} and \textit{no hate speech}, encoded as 1 and 0, respectively. Various text cleaning techniques were then applied, including the removal of special characters, URLs, mentions, Twitter-specific symbols, spelling correction, stopword removal, stemming, as well as the elimination of duplicate records and null values. Additionally, the vocabulary was enriched through synonym validation and expansion. To address the inherent class imbalance, the Easy Data Augmentation (EDA) technique was applied, which allowed for the generation of a balanced dataset, ultimately saved in a CSV file named \texttt{balanced\_data.csv}~\cite{wei2019eda}.
+
+The preprocessing approach adopted in this study shares several similarities with previous works such as those by Fieri et al.~\cite{fieri2023offensive} and Almeida et al.~\cite{almeida2023comparison}, particularly in terms of text data cleaning and preparation for hate speech detection tasks. As in these studies, common techniques were applied, including the removal of textual noise (mentions, URLs, symbols), lexical normalization, and dimensionality reduction through the use of stopwords and stemming. However, our approach integrates additional steps that are not consistently addressed in those works, such as automated spelling correction, semantic validation using synonyms, and the application of data augmentation techniques like Easy Data Augmentation (EDA). This last aspect represents a significant difference, as the reviewed studies often rely on direct undersampling or oversampling, whereas our methodology emphasizes the synthetic generation of new samples. This can contribute to greater dataset diversity and model robustness during training, regardless of the architecture employed~\cite{wei2019eda}.
+
+
+\subsection{Machine learning Methods}
+
+\input{sections/methodologies/logisticregression_methodology.tex}
+\input{sections/methodologies/naive_bayes_methodology.tex}
+\input{sections/methodologies/svm_methodology.tex}
+\input{sections/methodologies/xgboots_methodology.tex}
+
+\subsection{Deep Learning Methods}
+
+\input{sections/methodologies/mpl_methodology.tex}
+\input{sections/methodologies/cnn_methodology.tex}
+\input{sections/methodologies/bi_lstm_methodology.tex}
+\input{sections/methodologies/gru_methodology.tex}
+\input{sections/methodologies/finetuning_roberta_methodology.tex}

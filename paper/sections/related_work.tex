@@ -1,0 +1,56 @@
+
+The problem of detecting toxicity and hate speech has been addressed by a variety of authors, each proposing interesting solutions. These authors have applied different methodologies, preprocessing techniques, models, and embeddings that have yielded varying results, but overall, they highlight the potential of using Machine Learning and Deep Learning to solve the problem.
+
+In \cite{fieri2023offensive}, Fieri and Suhartono aimed to perform automatic moderation using Machine Learning and Deep Learning to combat the rapid spread of offensive language on the internet. Building on previous research, they explored the best combination of models to construct an ensemble model that used soft voting. This form of voting determines the probability of each class for each estimator in order to make the overall prediction.
+
+Regarding the methodology, a dataset from Twitter was used, and cleaning was performed to remove URLs, user mentions, and punctuation. Subsequently, Easy Data Augmentation was applied to balance the datasets using techniques such as synonym replacement, random insertion, random swap, and random deletion. The dataset was tokenized. Then, for Deep Learning, embedding using GloVe was applied, and for Machine Learning, TF-IDF and sentiment analysis with Valence Aware Dictionary and Sentiment Reasoner (VADER) were used.
+
+For Machine Learning, the models used were: Random Forest, Naive Bayes, Decision Tree, Logistic Regression, AdaBoost, and KNN. These models were trained using cross-validation, and based on the F1-score, the top 3 and top 5 were selected to build models with soft voting. For Deep Learning, CNN, LSTM, Bi-LSTM, GRU, and Bi-GRU were used. These networks were trained and grouped, taking one version each of LSTM and GRU along with CNN \cite{fieri2023offensive}.
+
+Regarding the results, it was found that Random Forest was the best Machine Learning model, achieving an F1-score of 92.685\%, and the best ensemble consisted of Random Forest, Decision Tree, Logistic Regression, AdaBoost, and Naive Bayes, reaching 92.750\%. In Deep Learning, Bi-LSTM achieved the best results with an F1-score of 93.560\%, and the best ensemble reached 93.818\%. The study concludes by noting that there may still be interesting combinations yet to be explored \cite{fieri2023offensive}.
+
+% Luego en el cuerpo:
+\begin{table}[!t]
+\caption{Performance comparison of Machine Learning and Deep Learning models (F1-score)}
+\label{tab:results}
+\centering
+\begin{tabularx}{\linewidth}{|l|X|c|}
+\hline
+\textbf{Category} & \textbf{Model(s)} & \textbf{F1-score (\%)} \\ \hline
+\multirow{2}{*}{Machine Learning} 
+  & Best single model: Random Forest & 92.685 \\ \cline{2-3}
+  & Best ensemble: RF, DT, LR, AdaBoost, NB & 92.750 \\ \hline
+\multirow{2}{*}{Deep Learning} 
+  & Best single model: Bi-LSTM & 93.560 \\ \cline{2-3}
+  & Best ensemble: CNN, Bi-LSTM, GRU & 93.818 \\ \hline
+\end{tabularx}
+\end{table}
+
+\vspace{0.5em}
+
+As shown in Table~\ref{tab:results}, the Deep Learning models, particularly Bi-LSTM and its ensembles, outperform the Machine Learning counterparts by a small margin. This suggests that recurrent architectures and their combinations are effective for detecting toxic comments. However, the high performance of ensemble methods in both categories indicates that combining models can enhance predictive accuracy.
+
+In \cite{bonetti2023comparison}, Bonetti et al., with an objective similar to that in \cite{fieri2023offensive}, seek to compare three methods frequently used in NLP challenges: Logistic Regression, Random Forest, and Support Vector Machine, along with topic modeling techniques (Latent Semantic Analysis - LSA and Latent Dirichlet Allocation - LDA), as well as the Transformer architecture, for the task of toxicity detection.
+
+In this research, TF-IDF and word embeddings were used. Two datasets were created: one with basic cleaning and lemmatization, and another similar one but without stop words and with emojis translated into words.
+
+For traditional Machine Learning models, TF-IDF was used with Logistic Regression and Random Forest. After experimenting with these models in their basic state, LDA with three topics was applied on the data to detect relevant aspects and improve the training of the two mentioned algorithms. Subsequently, LSA was used to reduce the dataset dimensionality and extract the main topics, combining it with SVM using a radial kernel \cite{bonetti2023comparison}.
+
+Finally, the Transformer architecture with BERTweet was employed to compare Machine Learning with Deep Learning. For BERTweet, fine-tuning was performed on its final layer. A variant with a binary classification neural network on top was also tested, training the entire model, and another version training only the binary classification layers.
+
+In the logistic regression experiment, an F1-score of 0.9073 was achieved using the first dataset. With Random Forest, a score of 0.9011 was obtained using the second dataset with the following hyperparameters: 100 estimators, a maximum depth of 80, and 10 samples required to split a node. SVM + LSA achieved 0.9112 using 5000 dimensions in LSA and C = 4.
+
+Using BERTweet, 0.9140 was reached with 4 epochs, a learning rate of 2 $\times$ 10$^{-5}$ with the Adam optimizer, and a hidden dropout probability of 0.3 in the model with fine-tuning on the head layer \cite{bonetti2023comparison}.
+
+Regarding LDA, the best model was logistic regression with the first dataset, achieving an F1-score of 0.9046. The research concludes that the task is difficult due to a highly changing environment. Nevertheless, it can be said that among the investigated models, high results were achieved, with logistic regression offering the best balance between performance and computational cost \cite{bonetti2023comparison}.
+
+Following similar objectives, Toktarova et al. in \cite{toktarova2023hate} sought to contribute to the development of tools and strategies to combat hate speech on social networks, aiming to create a healthy environment. To this end, they investigated and compared multiple methods from both Deep Learning and Machine Learning in the context of hate speech on Twitter.
+
+In this research, after performing cleaning preprocessing on three datasets, TF-IDF and Word2Vec were used to embed the texts. For Machine Learning exploration, decision trees, Naive Bayes, KNN, and SVM were used. For Deep Learning, LSTM, Bi-LSTM, and CNN were employed.
+
+From the results, it was shown that the most valuable methods were Deep Learning ones, highlighting Bi-LSTM, which achieved an F1-score of 0.899 on one of the datasets used.
+
+\noindent
+The research concludes that traditional Machine Learning fails to capture context, unlike some Deep Learning architectures. However, the latter are more prone to overfitting, require large volumes of data, are harder to train, and computationally expensive.
+
+One final consideration, which is very interesting, concerns the importance of achieving metrics that minimize both false positives and false negatives, to avoid the unjustified suppression of freedom of expression \cite{toktarova2023hate}.

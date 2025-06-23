@@ -1,0 +1,28 @@
+Taking into account all the previously mentioned results and their comparison with related works, we can say that some of our models outperformed certain previous investigations in terms of accuracy. However, there were also investigations where our metrics fell short. Our best accuracy was achieved using the model based on RoBERTa through fine-tuning, as shown in Table~\ref{tab:model_accuracy_comparison}. With this model, we were able to reach 90\% accuracy, which is a high score, but still considerably lower compared to results like those obtained by \citep{fieri2023offensive}, where 96.102\% was achieved using BI-LSTM and EDA.
+
+Our 90\% accuracy can be problematic in terms of misclassification. If it occurs, we might end up suppressing freedom of speech or failing to identify inappropriate, hateful, or toxic content. The most significant concern with the resulting model is the possibility of marking something as non-toxic when it is actually toxic, considering the precision and recall values obtained.
+
+Another insight derived from our results is that deep learning seems to be better suited for this kind of NLP task. As shown in Table~\ref{tab:model_accuracy_comparison}, the best results and improvements were obtained using DL-based architectures. This leads us to think that the ability to sequentially analyze a sentence and/or transform it through different optimized feature spaces contributes to better characteristic and insight extraction, which in turn results in better performance on the task. Additionally, given that our best-performing model was a fine-tuned version of RoBERTa, we can say that the robustness of DL architectures considerably boosts the results, especially when pre-training (transfer learning) is involved.
+
+To improve our results, multiple approaches can be explored in future investigations. One of these could be training on more data, particularly data from the toxic class, as our models appear to be biased toward the non-toxic class. Another possibility could involve testing and fine-tuning decoders for the classification task through conditional generation based on a given sentence or context.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l c}
+\toprule
+\textbf{Model} & \textbf{Accuracy} \\
+\midrule
+Logistic Regression     & 0.8627 \\
+Naive Bayes             & 0.85 \\
+SVM                     & 0.87 \\
+XGBoostClassifier       & 0.86 \\
+MLP                     & 0.83 \\
+CNN                     & 0.8618 \\
+BI-LSTM                 & 0.89 \\
+GRU                     & 0.90 \\
+RoBERTa Fine-Tuning     & 0.90 \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy comparison between all implemented models.}
+\label{tab:model_accuracy_comparison}
+\end{table}
