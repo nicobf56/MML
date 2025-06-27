@@ -3,7 +3,7 @@
 
 ## Ejecución de la demostración (Inferencia)
 
-Para ejecutar la demostración y probar el mejor modelo alcanzado debera ejecutar el notebook `robertaft.ipynb` el cual genera un archivo `best_model.pth` el cual debe ser puesto en la carpeta de backend. Posterior a esto, se debe realizar la ejecución de tanto el frontend como el backend.
+Para ejecutar la demostración y probar el mejor modelo alcanzado debera ejecutar el notebook `roberta_finetuning.ipynb` el cual genera un archivo `best_model.pth` el cual debe ser puesto en la carpeta de backend. Posterior a esto, se debe realizar la ejecución de tanto el frontend como el backend.
 
 ### Ejecución del backend
 
