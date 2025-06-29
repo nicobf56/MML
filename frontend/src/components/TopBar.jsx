@@ -13,7 +13,7 @@ export default function TopBar() {
                         style={{ marginRight: "15px" }}
                     />
                     <span style={{height: "100%", verticalAlign: "center"}}>
-                        Hate Speech Detection - Machine Learning Techniques
+                        Hate Speech Detection - Mastering Machine Learning
                     </span>
                 </Navbar.Brand>
             </Container>
