@@ -3,7 +3,8 @@
 
 ## Ejecución de la demostración (Inferencia)
 
-Para ejecutar la demostración y probar el mejor modelo alcanzado debera ejecutar el notebook `roberta_finetuning.ipynb` el cual genera un archivo `best_model.pth` el cual debe ser puesto en la carpeta de backend. Posterior a esto, se debe realizar la ejecución de tanto el frontend como el backend.
+Descargar el archivo best_model.pth de: https://uniandes-my.sharepoint.com/:f:/g/personal/n_bedoyaf_uniandes_edu_co/EkU0n4vk1Z9OhbkCi7mGhO4BcPac0JiJDTtLN9aR337R1A?e=ps6e4a
+Ubicar este archivo dentro de la carpeta del backend y continuar con los siguientes pasos
 
 ### Ejecución del backend
 
