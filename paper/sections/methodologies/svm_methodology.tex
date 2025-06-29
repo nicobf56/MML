@@ -1,7 +1,0 @@
-\subsubsection{SVM}
-
-The methodology used for SVM was very similar to the one applied with \texttt{XGBoostClassifier}. To begin with, the RoBERTa-generated embeddings were loaded. Secondly, the data was split into training and testing sets, with 80\% and 20\% of the data respectively. Then, a parameter grid was defined to conduct hyperparameter tuning. The hyperparameters tested were the kernel and \texttt{C} (penalty for misclassification). The values tested for the kernel were: \texttt{linear}, \texttt{poly}, \texttt{RBF}, and \texttt{sigmoid}; whereas for \texttt{C}, the values tested were: 0.1, 1, and 5. Finally, a grid search with 3-fold cross-validation was used.
-
-Due to the severe computational cost of hyperparameter search, approximately 20\% of the dataset was used to perform the tuning.
-
-To evaluate the model, F1-score, precision, recall, and accuracy were measured using a classification report. Lastly, a confusion matrix was displayed to observe how the data was being classified by the model.
