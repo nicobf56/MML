@@ -4,7 +4,7 @@
 ## Ejecución de la demostración (Inferencia)
 
 Descargar el archivo best_model.pth de: https://uniandes-my.sharepoint.com/:f:/g/personal/n_bedoyaf_uniandes_edu_co/EkU0n4vk1Z9OhbkCi7mGhO4BcPac0JiJDTtLN9aR337R1A?e=ps6e4a
-Ubicar este archivo dentro de la carpeta del backend y continuar con los siguientes pasos
+Ubicar este archivo dentro de la carpeta del backend (al mismo nivel de app.py) y continuar con los siguientes pasos
 
 ### Ejecución del backend
 
