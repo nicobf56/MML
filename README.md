@@ -50,3 +50,5 @@ cd frontend
 npm i
 npm run start
 ```
+
+Una vez ejecutado todo, podrá hacer uso del prototipo. Ingrese un mensaje y haga click en el botón "Submmit", a continuación se mostrará una etiqueta y el porcentaje para determinar si es tóxico o no (mayor a 50% es tóxico y menor es no tóxico). También podrá observar una gráfica de barras y una columna donde puede seleccionar las palabras del mensaje que ingresó, estas gráficas muestran cuántas veces apareció dicha palabra en los datos con los que se entrenó el modelo.
