@@ -24,7 +24,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-Posterior a crear e ingresar al ambiente virtual deberá instalar las dependencias:
+Posterior a crear e ingresar al ambiente virtual deberá instalar las dependencias (esto puede demorar unos minutos):
 ```bash
 pip install -r requirements.txt
 ```
