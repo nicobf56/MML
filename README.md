@@ -21,7 +21,7 @@ Para Windows (CMD):
 ```bash
 cd backend
 python -m venv venv
-.\venv\Scripts\activate
+\venv\Scripts\activate
 ```
 
 Posterior a crear e ingresar al ambiente virtual debera instalar las dependencias:
