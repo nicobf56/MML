@@ -18,7 +18,7 @@ export default function InferenceField({ input, setInput, handleClean, handleSub
                 <Row style={{ width: "100%", justifyContent: "center", marginBottom: "20px" }}>
                     {show && (
                         <span style={{ fontWeight: "bold", width: "100%", textAlign: "center", fontSize: 30 }} > 
-                            {toxic ? "Hate Speech" : "Not Hate Speech"}{" "}
+                            {toxic ? "Toxic" : "Not Toxic"}{" "}
                             ({score !== null ? `${Math.round(score * 100)}%` : "?"})
                         </span>
                         )}
