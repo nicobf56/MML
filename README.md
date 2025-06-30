@@ -24,12 +24,12 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-Posterior a crear e ingresar al ambiente virtual debera instalar las dependencias:
+Posterior a crear e ingresar al ambiente virtual deberá instalar las dependencias:
 ```bash
 pip install -r requirements.txt
 ```
 
-Ahora, sera necesario ejecutar el servidor backend:
+Ahora, será necesario ejecutar el servidor backend:
 
 Para linux/macOS:
 ```bash
@@ -43,7 +43,7 @@ python app.py
 
 ### Ejecución del frontend
 
-Para ejecutar el frontend, ejecute los siguientes comandos desde la carpeta raiz del proyecto. Recuerde tener node instalado.
+Para ejecutar el frontend, ejecute los siguientes comandos desde la carpeta raíz del proyecto. Recuerde tener node instalado.
 
 ```bash
 cd frontend
